@@ -16,16 +16,12 @@ func bubbleSort(items []int) {
 		sorted = false
 	)
 	for !sorted {
-		swapped := false
+		sorted = true
 		for i := 0; i < n-1; i++ {
 			if items[i] > items[i+1] {
 				items[i+1], items[i] = items[i], items[i+1]
-				swapped = true
+				sorted = false
 			}
 		}
-		if !swapped {
-			sorted = true
-		}
-		n = n - 1
 	}
 }
